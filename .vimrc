@@ -1,5 +1,5 @@
-"2018 Jan 12
-"v1.0 for osx
+"2019 Mar19
+" v1.2 for osx
 "Kevin Sun
 
 syntax on
@@ -14,4 +14,12 @@ filetype indent on
 set wildmenu
 set showmatch
 set relativenumber 
-colorscheme material_monokai
+colorscheme duoduo
+" disable error bell (2019 Feb 5)
+set belloff=all
+" record macro for inserting (c) and deleting (d) comments (2019 Mar 19)
+:let @c="0i//\<ESC>j"
+:let @d="0xxj"
+" record macro for inserting (t) and deleting (u) a tab(4 spaces) (2019 Mar 19)
+:let @t=":s/^/    /g\<ENTER>"
+:let @u=":s/^    //g\<ENTER>"
